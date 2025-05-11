@@ -1,6 +1,9 @@
 import numpy as np
 import math
 
+from src.population import evaluate_population, get_elites
+
+
 def cross(parent1, parent2, method="arithmetic", alpha=0.25, beta=0.5, bounds = [-math.inf, math.inf], obj_func = None)-> np.ndarray:
     if method == "arithmetic":
         children = arithmetic_cross(parent1, parent2, alpha)
